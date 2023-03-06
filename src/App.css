@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #f8f9fa;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,7 +36,68 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.MyTasks {
+  /* width: 1000px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  /* width: 1000px; */
+  /* /* width: 90%; */
+  width: 60%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.deletediv {
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* width: 990px; */
+  border-radius: 12px;
+  background-color: #E6f7fb;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  border-left: 8px solid #0A788C
+}
+.save{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 60%;
+}
+.ToDo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AddToDoSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+/* align-items: center; */
+  width: 60%;
+}
+
+.filter{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
