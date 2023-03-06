@@ -40,7 +40,7 @@ const ToDo = () => {
 
         };
         setToDos([...toDos, newToDo]);
-        
+
     }
     const changeFilter = (filterName) => { setFilter(filterName); }
 
@@ -65,9 +65,19 @@ const ToDo = () => {
                 <BlueButton onClick={() => { changeFilter('active') }}>Active</BlueButton>
                 <BlueButton onClick={() => { changeFilter('completed') }}>Completed</BlueButton></div>
             <div className="save"><h2>Create To-dos</h2></div>
-            <AddToDoSection handlecheck={handlecheck} addTodo={addTodo} setLocalStorage={setLocalStorage} printTodos={printTodos} toDos={toDos} deleteTodo={deleteTodo} />
-            <MyTasks toDos={toDos} deleteTodo={deleteTodo} handlecheck={handlecheck} filter={filter} />
-            <div className="save"><BlueButton onClick={setLocalStorage}>Save</BlueButton> </div>
+            <AddToDoSection
+                handlecheck={handlecheck}
+                addTodo={addTodo}
+                setLocalStorage={setLocalStorage}
+            />
+            <MyTasks
+                toDos={toDos}
+                deleteTodo={deleteTodo}
+                handlecheck={handlecheck}
+                filter={filter} />
+            <div className="save">
+                <BlueButton onClick={setLocalStorage}>Save</BlueButton>
+            </div>
 
         </div >
     );
