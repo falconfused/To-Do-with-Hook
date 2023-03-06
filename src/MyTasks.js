@@ -1,7 +1,6 @@
-import styled from "styled-components";
 import "./App.css"
 import { TodoTitle } from "./styled-components";
-import { useEffect, useState } from "react";
+
 const MyTasks = ({ toDos, deleteTodo, handlecheck, filter }) => {
     let isChecked = false;
     console.log(filter)
@@ -22,10 +21,8 @@ const MyTasks = ({ toDos, deleteTodo, handlecheck, filter }) => {
                         isChecked = item.is_active
                     }
                     } checked={item.is_active} />
-                    <div className="deletediv"><TodoTitle is_active={item.is_active} >{item.title}</TodoTitle>
-
-
-
+                    <div className="deletediv">
+                        <TodoTitle is_active={item.is_active} >{item.title}</TodoTitle>
                         <i className="fa-solid fa-trash" onClick={() => deleteTodo(item.id)} ></i>
                     </div>
 

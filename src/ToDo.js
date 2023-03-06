@@ -32,10 +32,7 @@ const ToDo = () => {
 
     const setLocalStorage = () => { localStorage.setItem('to-dos', JSON.stringify(toDos)); }
     const addTodo = (val) => {
-        // event.preventDefault();
-        // console.log(val)
 
-        // event.preventdefault();
         const newToDo = {
             title: val,
             is_active: false,
@@ -43,7 +40,7 @@ const ToDo = () => {
 
         };
         setToDos([...toDos, newToDo]);
-        // console.log(toDos);
+        
     }
     const changeFilter = (filterName) => { setFilter(filterName); }
 
@@ -69,7 +66,7 @@ const ToDo = () => {
                 <BlueButton onClick={() => { changeFilter('completed') }}>Completed</BlueButton></div>
             <div className="save"><h2>Create To-dos</h2></div>
             <AddToDoSection handlecheck={handlecheck} addTodo={addTodo} setLocalStorage={setLocalStorage} printTodos={printTodos} toDos={toDos} deleteTodo={deleteTodo} />
-            <MyTasks toDos={toDos} deleteTodo={deleteTodo} handlecheck={handlecheck} filter={filter}/>
+            <MyTasks toDos={toDos} deleteTodo={deleteTodo} handlecheck={handlecheck} filter={filter} />
             <div className="save"><BlueButton onClick={setLocalStorage}>Save</BlueButton> </div>
 
         </div >

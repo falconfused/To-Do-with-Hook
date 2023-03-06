@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { BlueButton, InputField } from "./styled-components";
 
 import MyTasks from "./MyTasks";
@@ -13,12 +13,6 @@ const AddToDoSection = ({
             <BlueButton onClick={
                 () => { addTodo(searchvalue) }
             }>Add</BlueButton>
-            
-
-            {/* <button onClick={addTodo}>Add</button>
-            <button onClick={setLocalStorage}>Save</button>
-            <button onClick={printTodos}>Print</button> */}
-
         </div >
     );
 }
